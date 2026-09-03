@@ -1,0 +1,14 @@
+interface:
+  display_name: "TrustGuard Architecture Diagram"
+  short_description: "Restyle technical diagrams in TrustGuard visual language"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#55D9FC"
+  default_prompt: "Use $trustguard-architecture-diagram to restyle this technical diagram while preserving its labels and topology."
+policy:
+  products:
+    - "chatgpt"
+    - "codex"
+    - "api"
+    - "atlas"
+  allow_implicit_invocation: true

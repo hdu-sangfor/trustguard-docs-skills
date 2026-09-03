@@ -1,0 +1,17 @@
+interface:
+  display_name: TrustGuard Light Architecture Diagram
+  short_description: Redraw technical diagrams in bright TrustGuard research-document
+    style
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+  brand_color: '#3F86DF'
+  default_prompt: Use $trustguard-light-architecture-diagram to redraw this technical
+    diagram in the bright TrustGuard competition-document style while preserving every
+    label and topology relationship.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

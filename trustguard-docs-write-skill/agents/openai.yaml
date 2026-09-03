@@ -1,0 +1,14 @@
+interface:
+  display_name: competition doc humanizer
+  short_description: 为中国国际大学生创新大赛（原“互联网+”）、“挑战杯”等大学生创新创业与学术科技竞赛撰写、改写和审阅中文项目材料，降低 AI
+    写作痕迹，同时提高评审可读性、证据密度、技术准确性、术语一致性和 Word 版式规范性。用于项目申报书、商业计划书、设计/开发/测试文档、总结报告、答辩稿、PPT
+    文案、演示视频脚本、摘要、成果介绍等；也用于按竞赛要求处理摘要编号、图表题注、页眉页脚、目录/正文页码、表格分页和正文对齐。尤其当用户要求“去 AI 味”“更像学生团队真实撰写”“按互联网+/挑战杯风格”“正式但不空泛”“保留技术术语和数据”或“按竞赛格式统一排版”时使用。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

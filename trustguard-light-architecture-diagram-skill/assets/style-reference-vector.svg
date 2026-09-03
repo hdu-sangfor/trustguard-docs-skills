@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#3F86DF"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8B66E8"/>
+    </marker>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#12233D" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .title { font-family: 'Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; font-size: 31px; font-weight: 800; fill:#12233D; }
+      .cardTitle { font-family: 'Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; font-size: 22px; font-weight: 700; fill:#12233D; }
+      .sub { font-family: 'Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; font-size: 16px; font-weight: 500; fill:#566980; }
+      .legend { font-family: 'Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; font-size: 18px; font-weight: 650; fill:#12233D; }
+      .boundary { fill:none; stroke:#82AEEF; stroke-width:3; stroke-dasharray:12 9; }
+      .mint { fill:#EAF7F3; stroke:#7BCFC2; stroke-width:2.4; }
+      .blue { fill:#F3F8FD; stroke:#8BB9EA; stroke-width:2.4; }
+      .purple { fill:#F3EEFF; stroke:#8B66E8; stroke-width:2.4; }
+      .flow { fill:none; stroke:#3F86DF; stroke-width:3.2; marker-end:url(#arrow-blue); }
+      .proto { fill:none; stroke:#8B66E8; stroke-width:3.2; marker-end:url(#arrow-purple); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+
+  <text class="title" x="160" y="78" text-anchor="middle">任务准备</text>
+  <text class="title" x="585" y="78" text-anchor="middle">执行调度</text>
+  <text class="title" x="1035" y="78" text-anchor="middle">Skill 执行</text>
+  <text class="title" x="1400" y="78" text-anchor="middle">结果回流</text>
+
+  <rect class="boundary" x="30" y="102" width="270" height="640" rx="24"/>
+  <rect class="boundary" x="330" y="102" width="500" height="640" rx="24"/>
+  <rect class="boundary" x="860" y="102" width="350" height="640" rx="24"/>
+  <rect class="boundary" x="1240" y="102" width="330" height="640" rx="24"/>
+
+  <g filter="url(#soft)">
+    <rect class="mint" x="64" y="150" width="200" height="92" rx="14"/>
+    <rect class="mint" x="64" y="328" width="200" height="92" rx="14"/>
+    <rect class="mint" x="64" y="506" width="200" height="92" rx="14"/>
+  </g>
+  <text class="cardTitle" x="164" y="205" text-anchor="middle">PlanItem</text>
+  <text class="cardTitle" x="164" y="383" text-anchor="middle">CompiledInstruction</text>
+  <text class="cardTitle" x="164" y="561" text-anchor="middle">ExecutionDispatcher</text>
+  <path class="flow" d="M164 242 V328"/>
+  <path class="flow" d="M164 420 V506"/>
+
+  <g filter="url(#soft)">
+    <rect class="purple" x="360" y="156" width="142" height="90" rx="14"/>
+    <rect class="purple" x="360" y="280" width="142" height="90" rx="14"/>
+    <rect class="blue" x="560" y="170" width="230" height="112" rx="14"/>
+    <rect class="blue" x="520" y="360" width="270" height="112" rx="14"/>
+    <rect class="blue" x="450" y="552" width="340" height="108" rx="14"/>
+  </g>
+  <text class="cardTitle" x="431" y="194" text-anchor="middle">HTTP</text>
+  <text class="sub" x="431" y="220" text-anchor="middle">REST</text>
+  <text class="cardTitle" x="431" y="318" text-anchor="middle">MQ</text>
+  <text class="sub" x="431" y="344" text-anchor="middle">RabbitMQ</text>
+  <text class="cardTitle" x="675" y="216" text-anchor="middle">Executor (HTTP / MQ)</text>
+  <text class="sub" x="675" y="246" text-anchor="middle">REST / RabbitMQ</text>
+  <text class="cardTitle" x="655" y="407" text-anchor="middle">目标范围与参数校验</text>
+  <text class="sub" x="655" y="438" text-anchor="middle">校验目标范围与请求参数</text>
+  <text class="cardTitle" x="620" y="596" text-anchor="middle">tools_registry.yaml 查询 Skill</text>
+  <text class="sub" x="620" y="628" text-anchor="middle">能力注册表 / 执行契约</text>
+  <path class="proto" d="M502 201 H548 V216 H560"/>
+  <path class="proto" d="M502 325 H536 V236 H560"/>
+  <path class="flow" d="M675 282 V360"/>
+  <path class="flow" d="M655 472 V552"/>
+  <path class="flow" d="M264 552 H450"/>
+
+  <g filter="url(#soft)">
+    <rect class="mint" x="900" y="150" width="270" height="120" rx="14"/>
+    <rect class="mint" x="900" y="345" width="270" height="115" rx="14"/>
+    <rect class="mint" x="900" y="540" width="270" height="120" rx="14"/>
+  </g>
+  <text class="cardTitle" x="1035" y="198" text-anchor="middle">独立 Skill 进程 / 容器</text>
+  <text class="sub" x="1035" y="230" text-anchor="middle">Python Runner / Binary / Container</text>
+  <text class="cardTitle" x="1035" y="397" text-anchor="middle">SkillResult</text>
+  <text class="sub" x="1035" y="429" text-anchor="middle">结构化结果 / 原始输出 / 状态码</text>
+  <text class="cardTitle" x="1035" y="589" text-anchor="middle">parsed_artifacts / execution status</text>
+  <text class="sub" x="1035" y="623" text-anchor="middle">结果解析 / 执行状态标准化</text>
+  <path class="flow" d="M1035 270 V345"/>
+  <path class="flow" d="M1035 460 V540"/>
+  <path class="flow" d="M790 606 H900"/>
+
+  <g filter="url(#soft)">
+    <rect class="purple" x="1285" y="344" width="240" height="126" rx="16"/>
+  </g>
+  <text class="cardTitle" x="1405" y="395" text-anchor="middle">Orchestrator Observation</text>
+  <text class="sub" x="1405" y="430" text-anchor="middle">供状态机下一轮决策使用</text>
+  <path class="flow" d="M1170 600 H1225 V407 H1285"/>
+
+  <path d="M410 796 H500" class="flow"/>
+  <text class="legend" x="520" y="803">数据流向</text>
+  <path d="M690 796 H780" class="proto"/>
+  <text class="legend" x="800" y="803">协议通道</text>
+  <rect x="1000" y="775" width="78" height="42" rx="12" class="boundary"/>
+  <text class="legend" x="1096" y="803">阶段边界</text>
+</svg>

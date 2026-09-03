@@ -1,0 +1,18 @@
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Generated previews and local exports
+preview/
+previews/
+output/
+*.tmp
+*.bak
+
+# Editor and OS metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
